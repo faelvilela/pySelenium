@@ -23,7 +23,7 @@ options.add_experimental_option("detach", True)
 
 navegador = webdriver.Chrome(service=Service(ChromeDriverManager().install()), options=options)  # Setando navegador
 
-navegador.get('https://bloqueio.procon.sp.gov.br/#/signIn/')
+navegador.get('https://site.com.br/#/signIn/')
 login = navegador.find_element(By.XPATH, '//*[@id="conteudo-interno"]/div[1]/div/form/div[1]/div/input')
 login.send_keys('login')
 senha = navegador.find_element(By.XPATH, '//*[@id="conteudo-interno"]/div[1]/div/form/div[2]/div/input')
