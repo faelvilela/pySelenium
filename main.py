@@ -39,12 +39,12 @@ time.sleep(15)
 exportar = navegador.find_element(By.XPATH, '//*[@id="conteudo-interno"]/div/div[1]/div[2]/div/div[2]/button[2]').click()
 time.sleep(60)
 navegador.quit()
+
 #Movendo arquivos Baixados
 file_names = os.listdir(path)
 for file_name in file_names:
     if file_name.endswith('.xlsx'):
         shutil.move(os.path.join(path, file_name), target_dir)
-time.sleep(2)
 os.startfile('Macros.xlsm')
 
 
